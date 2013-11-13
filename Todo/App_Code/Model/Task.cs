@@ -9,8 +9,8 @@ namespace Todo.App_Code.Model
     {
         public int Id { get; set; }
         public string Text { get; set; }
-        public DateTime Created { get; private set; }
-        public bool Done { get; private set; }
+        public DateTime Created { get; set; }
+        public bool Done { get; set; }
         public int UserId { get; set; }
         public int TaskListId { get; set; }
 

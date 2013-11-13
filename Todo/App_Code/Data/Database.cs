@@ -10,7 +10,6 @@ namespace Todo.App_Code.Data
     public class Database
     {
         private SqlConnection connection;
-        private String Language = "en";
         private static String CONNECTION_STRING = ConfigurationManager.ConnectionStrings["appharbor"].ConnectionString;
     
         public Database()

@@ -19,8 +19,8 @@ namespace Todo
             Database db = new Database();
             TaskListRepository repo = new TaskListRepository(db);
             Label1.Text = repo.GetAll().Count.ToString();
-            GridView2.DataSource = repo.GetAll();
-            GridView2.DataBind();
+            //GridView2.DataSource = repo.GetAll();
+            //GridView2.DataBind();
 
         }
 
@@ -46,6 +46,22 @@ namespace Todo
         protected void DetailsView1_ItemCreated(object sender, EventArgs e)
         {
             GridView1.DataBind();
+        }
+
+        protected void DetailsView2_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+        {
+            GridView2.DataBind();
+
+        }
+
+        protected void DetailsView2_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+        {
+            GridView2.DataBind();
+        }
+
+        protected void DetailsView2_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+        {
+            GridView2.DataBind();
         }
     }
 }

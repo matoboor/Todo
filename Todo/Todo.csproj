@@ -64,6 +64,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Data\TaskRepository.cs" />
+    <Compile Include="App_Code\Data\UnitOfWork.cs" />
+    <Compile Include="App_Code\Data\UserRepository.cs" />
     <Compile Include="App_Code\Model\User.cs" />
     <Compile Include="App_Code\Model\TaskList.cs" />
     <Compile Include="App_Code\Model\Task.cs" />

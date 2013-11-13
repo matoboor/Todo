@@ -23,6 +23,11 @@ namespace Todo.App_Code.Data
             this.db = database;
         }
 
+        public TaskListRepository()
+        {
+            this.db = new Database();
+        }
+
         private static IList<TaskList> Read(SqlDataReader reader)
         {
             IList<TaskList> taskLists = new List<TaskList>();
