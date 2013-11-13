@@ -55,5 +55,10 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         </div>
+        <div>
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </div>
+        <asp:GridView ID="GridView2" runat="server">
+        </asp:GridView>
     </asp:Content>
 

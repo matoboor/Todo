@@ -64,6 +64,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Model\User.cs" />
+    <Compile Include="App_Code\Model\TaskList.cs" />
+    <Compile Include="App_Code\Model\Task.cs" />
+    <Compile Include="App_Code\Data\Database.cs" />
+    <Compile Include="App_Code\Data\TaskListRepository.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -4,13 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Todo.App_Code.Data;
+
 
 namespace Todo
 {
     public partial class Default : System.Web.UI.Page
     {
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            Database db = new Database();
+            TaskListRepository repo = new TaskListRepository(db);
+            Label1.Text = repo.GetAll().Count.ToString();
+            GridView2.DataSource = repo.GetAll();
+            GridView2.DataBind();
 
         }
 
