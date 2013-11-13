@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Default.aspx.cs" Inherits="Todo.Default" %>
 
     <asp:Content runat="server" ContentPlaceHolderID="title">
-        <h1>Predajcovia</h1>
+        <h1>Krestan smrdi</h1>
     </asp:Content>
     
     <asp:Content runat="server" ContentPlaceHolderID="main">
