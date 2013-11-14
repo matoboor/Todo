@@ -6,54 +6,6 @@
     
     <asp:Content runat="server" ContentPlaceHolderID="main">
         <div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
-            <Columns>
-                <asp:CommandField ShowSelectButton="True" />
-                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="Meno" HeaderText="Meno" SortExpression="Meno" />
-                <asp:BoundField DataField="Priezvisko" HeaderText="Priezvisko" SortExpression="Priezvisko" />
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Server=32f95191-f0b7-4f58-b323-a275000b989d.sqlserver.sequelizer.com;Database=db32f95191f0b74f58b323a275000b989d;User ID=okjunwouayacrcfj;Password=3qn5G76cA28AffupZPzx2qvPMnt4TYPwvX2hCYLJAsvL3hR4LSoaNWCK3FquLbrK;" DeleteCommand="DELETE FROM [Predajca] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Predajca] ([Meno], [Priezvisko]) VALUES (@Meno, @Priezvisko)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [Predajca]" UpdateCommand="UPDATE [Predajca] SET [Meno] = @Meno, [Priezvisko] = @Priezvisko WHERE [Id] = @Id">
-            <DeleteParameters>
-                <asp:Parameter Name="Id" Type="Int32" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="Meno" Type="String" />
-                <asp:Parameter Name="Priezvisko" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="Meno" Type="String" />
-                <asp:Parameter Name="Priezvisko" Type="String" />
-                <asp:Parameter Name="Id" Type="Int32" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
-            <hr />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource2" Height="50px" OnItemCreated="DetailsView1_ItemCreated" OnItemDeleted="DetailsView1_ItemDeleted" OnItemInserted="DetailsView1_ItemInserted" OnItemUpdated="DetailsView1_ItemUpdated" Width="125px">
-            <Fields>
-                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="Meno" HeaderText="Meno" SortExpression="Meno" />
-                <asp:BoundField DataField="Priezvisko" HeaderText="Priezvisko" SortExpression="Priezvisko" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
-            </Fields>
-        </asp:DetailsView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:appharbor %>" DeleteCommand="DELETE FROM [Predajca] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Predajca] ([Meno], [Priezvisko]) VALUES (@Meno, @Priezvisko)" SelectCommand="SELECT * FROM [Predajca] WHERE ([Id] = @Id)" UpdateCommand="UPDATE [Predajca] SET [Meno] = @Meno, [Priezvisko] = @Priezvisko WHERE [Id] = @Id">
-            <DeleteParameters>
-                <asp:Parameter Name="Id" Type="Int32" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="Meno" Type="String" />
-                <asp:Parameter Name="Priezvisko" Type="String" />
-            </InsertParameters>
-            <SelectParameters>
-                <asp:ControlParameter ControlID="GridView1" Name="Id" PropertyName="SelectedValue" Type="Int32" />
-            </SelectParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="Meno" Type="String" />
-                <asp:Parameter Name="Priezvisko" Type="String" />
-                <asp:Parameter Name="Id" Type="Int32" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
         </div>
         <div>
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
@@ -66,10 +18,12 @@
             </Columns>
         </asp:GridView>
         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DataObjectTypeName="Todo.App_Code.Model.TaskList" DeleteMethod="Delete" InsertMethod="Save" SelectMethod="GetAll" TypeName="Todo.App_Code.Data.TaskListRepository" UpdateMethod="Update"></asp:ObjectDataSource>
-        <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataSourceID="ObjectDataSource2" Height="50px" OnItemDeleted="DetailsView2_ItemDeleted" OnItemInserted="DetailsView2_ItemInserted" OnItemUpdated="DetailsView2_ItemUpdated" Width="125px">
+            <hr />
+        <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataSourceID="ObjectDataSource2" Height="50px" OnItemDeleted="DetailsView2_ItemDeleted" OnItemInserted="DetailsView2_ItemInserted" OnItemUpdated="DetailsView2_ItemUpdated" Width="125px" DataKeyNames="Id,Title">
             <Fields>
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                 <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
         <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" DataObjectTypeName="Todo.App_Code.Model.TaskList" DeleteMethod="Delete" InsertMethod="Save" SelectMethod="Get" TypeName="Todo.App_Code.Data.TaskListRepository" UpdateMethod="Update">
