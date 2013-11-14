@@ -31,5 +31,43 @@
                 <asp:ControlParameter ControlID="GridView2" Name="id" PropertyName="SelectedValue" Type="Int32" />
             </SelectParameters>
         </asp:ObjectDataSource>
+    <asp:Label ID="Label2" runat="server" Text="Users"></asp:Label>
+<asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="ObjectDataSource3">
+    <Columns>
+        <asp:CommandField ShowSelectButton="True" />
+        <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
+        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+        <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+        <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+    </Columns>
+</asp:GridView>
+<asp:ObjectDataSource ID="ObjectDataSource3" runat="server" SelectMethod="GetAll" TypeName="Todo.App_Code.Data.UserRepository"></asp:ObjectDataSource>
+<asp:DetailsView ID="DetailsView3" runat="server" AutoGenerateRows="False" DataSourceID="ObjectDataSource4" Height="50px" Width="125px">
+    <Fields>
+        <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
+        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+        <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
+        <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+    </Fields>
+</asp:DetailsView>
+<asp:ObjectDataSource ID="ObjectDataSource4" runat="server" DataObjectTypeName="Todo.App_Code.Model.User" DeleteMethod="Delete" InsertMethod="Save" SelectMethod="Get" TypeName="Todo.App_Code.Data.UserRepository" UpdateMethod="Update">
+    <SelectParameters>
+        <asp:ControlParameter ControlID="GridView3" Name="id" PropertyName="SelectedValue" Type="Int32" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+        <asp:Label ID="Label3" runat="server" Text="Tasks"></asp:Label>
+        <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource5">
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
+                <asp:BoundField DataField="Text" HeaderText="Text" SortExpression="Text" />
+                <asp:BoundField DataField="Created" HeaderText="Created" SortExpression="Created" />
+                <asp:CheckBoxField DataField="Done" HeaderText="Done" SortExpression="Done" />
+                <asp:BoundField DataField="UserId" HeaderText="UserId" SortExpression="UserId" />
+                <asp:BoundField DataField="TaskListId" HeaderText="TaskListId" SortExpression="TaskListId" />
+            </Columns>
+        </asp:GridView>
+        <asp:ObjectDataSource ID="ObjectDataSource5" runat="server" SelectMethod="GetAll" TypeName="Todo.App_Code.Data.TaskRepository"></asp:ObjectDataSource>
     </asp:Content>
 

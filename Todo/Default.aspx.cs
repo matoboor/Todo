@@ -18,31 +18,32 @@ namespace Todo
             
             Database db = new Database();
             TaskListRepository repo = new TaskListRepository(db);
-            Label1.Text = repo.GetAll().Count.ToString();
+            Label1.Text = "Projects";
+            
             //GridView2.DataSource = repo.GetAll();
             //GridView2.DataBind();
 
         }
 
-        protected void DetailsView1_ItemInserting(object sender, DetailsViewInsertEventArgs e)
-        {
-        }
+        //protected void DetailsView1_ItemInserting(object sender, DetailsViewInsertEventArgs e)
+        //{
+        //}
 
-        protected void DetailsView1_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
-        {
-        }
+        //protected void DetailsView1_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+        //{
+        //}
 
-        protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
-        {
-        }
+        //protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+        //{
+        //}
 
-        protected void DetailsView1_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
-        {
-        }
+        //protected void DetailsView1_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+        //{
+        //}
 
-        protected void DetailsView1_ItemCreated(object sender, EventArgs e)
-        {
-        }
+        //protected void DetailsView1_ItemCreated(object sender, EventArgs e)
+        //{
+        //}
 
         protected void DetailsView2_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
         {

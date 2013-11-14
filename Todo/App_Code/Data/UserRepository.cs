@@ -12,12 +12,12 @@ namespace Todo.App_Code.Data
     {
         private Database db;
 
-        private static string SQL_SELECT = "SELECT * FROM User";
-        private static string SQL_SELECT_ID = "SELECT * FROM User WHERE id=@id";
-        private static string SQL_SELECT_USERNAME = "SELECT * FROM User WHERE username=@username";
-        private static string SQL_INSERT = "INSERT INTO User VALUES(@name, @username, @password)";
-        private static string SQL_UPDATE = "UPDATE User SET name=@name, username=@username, password=@password WHERE id=@id";
-        private string SQL_DELETE = "DELETE FROM User WHERE id=@id";
+        private static string SQL_SELECT = "SELECT * FROM [dbo].[User]";
+        private static string SQL_SELECT_ID = "SELECT * FROM [dbo].[User] WHERE id=@id";
+        private static string SQL_SELECT_USERNAME = "SELECT * FROM [dbo].[User] WHERE username=@username";
+        private static string SQL_INSERT = "INSERT INTO [dbo].[User] VALUES(@name, @username, @password)";
+        private static string SQL_UPDATE = "UPDATE [dbo].[User] SET name=@name, username=@username, password=@password WHERE id=@id";
+        private string SQL_DELETE = "DELETE FROM [dbo].[User] WHERE id=@id";
 
         public UserRepository(Database database)
         {
