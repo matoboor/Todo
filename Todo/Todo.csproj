@@ -61,6 +61,8 @@
     <Content Include="css\normalize.css" />
     <Content Include="css\normalize.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="img\Add.png" />
+    <Content Include="img\Projects.png" />
     <Content Include="js\main.js" />
     <Content Include="js\vendor\jquery-1.10.1.min.js" />
     <Content Include="js\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
@@ -121,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -160,6 +160,16 @@ nav a:hover {
 table {
     border-color: #f16529;
 }
+section {
+    border: 1px dotted #e44d26;
+    margin-bottom:10px;
+}
+
+input[type=submit] {
+    background-color: #e44d26;
+    color: white;
+    border: 0px;
+}
 
 
 

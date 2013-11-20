@@ -6,6 +6,7 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="main">
+    <h2><asp:Label runat="server" ID="projectHeader"></asp:Label></h2>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="TasksDataSource">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
@@ -31,6 +32,7 @@
     
         <HeaderTemplate>
            <h3>Projects</h3>
+            <section>   
            <ul class="minimenu">
         </HeaderTemplate>
 
@@ -41,9 +43,14 @@
 
         <FooterTemplate>
             </ul>
+            </section>
         </FooterTemplate>
     
     </asp:Repeater>
-    <asp:ObjectDataSource ID="ProjectsMenuDataSource" runat="server" SelectMethod="GetAll" TypeName="Todo.App_Code.Data.TaskListRepository"></asp:ObjectDataSource>
-
+    <asp:ObjectDataSource ID="ProjectsMenuDataSource" runat="server" SelectMethod="GetAll" TypeName="Todo.App_Code.Data.TaskListRepository" DataObjectTypeName="Todo.App_Code.Model.TaskList" InsertMethod="Save"></asp:ObjectDataSource>
+    <div>
+    <asp:TextBox ID="newProject" runat="server" Width="100px"></asp:TextBox>
+    <asp:Button ID="newProjectButton" runat="server" OnClick="newProjectButton_Click" Text="Add" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="newProject" ErrorMessage="You must add a project name!"></asp:RequiredFieldValidator>
+    </div>
 </asp:Content>
