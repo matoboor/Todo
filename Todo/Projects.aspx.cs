@@ -11,8 +11,13 @@ namespace Todo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.QueryString["Id"] != null)
+            {
+                GridView1.Visible = true;
+            }
+            else GridView1.Visible = false;
         }
+
 
     }
 }

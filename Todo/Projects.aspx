@@ -14,9 +14,7 @@
                 <asp:CheckBoxField DataField="Done" HeaderText="Done" SortExpression="Done" />
                 <asp:BoundField DataField="UserId" HeaderText="UserId" SortExpression="UserId" />
             </Columns>
-            <EmptyDataTemplate>
-                <p>No Tasks</p>
-            </EmptyDataTemplate>
+            <EmptyDataTemplate><div><asp:HyperLink>Add new task</asp:HyperLink></div></EmptyDataTemplate>
             <HeaderStyle BackColor="#E44D26" ForeColor="White" />
         </asp:GridView>
         <asp:ObjectDataSource ID="TasksDataSource" runat="server" SelectMethod="GetByTaskList" TypeName="Todo.App_Code.Data.TaskRepository">
