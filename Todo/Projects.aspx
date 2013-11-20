@@ -6,16 +6,16 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="main">
-    <h2><asp:Label runat="server" ID="projectHeader"></asp:Label></h2>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="TasksDataSource">
+    <h2><img src="/img/Projects.png" />&nbsp<asp:Label runat="server" ID="projectHeader"></asp:Label></h2>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="TasksDataSource" CellPadding="5" CellSpacing="10">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                 <asp:BoundField DataField="Text" HeaderText="Text" SortExpression="Text" />
                 <asp:BoundField DataField="Created" HeaderText="Created" SortExpression="Created" />
                 <asp:CheckBoxField DataField="Done" HeaderText="Done" SortExpression="Done" />
-                <asp:BoundField DataField="UserId" HeaderText="UserId" SortExpression="UserId" />
+                <asp:BoundField DataField="Owner.Name" HeaderText="User" SortExpression="UserId" />
             </Columns>
-            <EmptyDataTemplate><div><asp:HyperLink>Add new task</asp:HyperLink></div></EmptyDataTemplate>
+            <EmptyDataTemplate><div><asp:HyperLink runat="server" CssClass="white" NavigateUrl="#">Add new task</asp:HyperLink></div></EmptyDataTemplate>
             <HeaderStyle BackColor="#E44D26" ForeColor="White" />
         </asp:GridView>
         <asp:ObjectDataSource ID="TasksDataSource" runat="server" SelectMethod="GetByTaskList" TypeName="Todo.App_Code.Data.TaskRepository">

@@ -42,6 +42,7 @@ namespace Todo.App_Code.Data
                 task.Done = reader.GetBoolean(3);
                 task.UserId = reader.GetInt32(4);
                 task.TaskListId = reader.GetInt32(5);
+                task.Owner = UserRepository.Get2(task.UserId);
 
                 tasks.Add(task);
             }

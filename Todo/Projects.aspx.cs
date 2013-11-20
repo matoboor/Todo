@@ -19,7 +19,11 @@ namespace Todo
                 GridView1.Visible = true;
                 projectHeader.Text = projectsDb.Get(Convert.ToInt32(Request.QueryString["Id"])).Title;
             }
-            else GridView1.Visible = false;
+            else
+            {
+                GridView1.Visible = false;
+                projectHeader.Text = "<< Select project";
+            }
         }
 
         protected void newProjectButton_Click(object sender, EventArgs e)
