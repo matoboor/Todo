@@ -60,5 +60,45 @@ namespace Todo
         {
             GridView2.DataBind();
         }
+
+        protected void DetailsView3_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+        {
+            GridView3.DataBind();
+        }
+
+        protected void DetailsView3_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+        {
+            GridView3.DataBind();
+        }
+
+        protected void DetailsView3_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+        {
+            GridView3.DataBind();
+        }
+
+        protected void DetailsView3_ItemCreated(object sender, EventArgs e)
+        {
+            GridView3.DataBind();
+        }
+
+        protected void DetailsView4_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+        {
+            GridView4.DataBind();
+        }
+
+        protected void DetailsView4_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+        {
+            GridView4.DataBind();
+        }
+
+        protected void DetailsView4_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+        {
+            GridView4.DataBind();
+        }
+
+        protected void DetailsView4_ItemCreated(object sender, EventArgs e)
+        {
+            GridView4.DataBind();
+        }
     }
 }

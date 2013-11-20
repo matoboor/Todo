@@ -14,8 +14,9 @@ namespace Todo.App_Code.Data
 
         private static string SQL_SELECT = "SELECT * FROM Task";
         private static string SQL_SELECT_ID = "SELECT * FROM Task WHERE id=@id";
+        private static string SQL_SELECT_TASKLIST_ID = "SELECT * FROM Task WHERE tasklist_id=@tasklist_id";
         private static string SQL_INSERT = "INSERT INTO Task VALUES(@text, @created, @done, @user_id, @tasklist_id)";
-        private static string SQL_UPDATE = "UPDATE Task SET @text, @created, @done, @user_id, @tasklist_id WHERE id=@id";
+        private static string SQL_UPDATE = "UPDATE Task SET text=@text, created=@created, done=@done, user_id=@user_id, tasklist_id=@tasklist_id WHERE id=@id";
         private string SQL_DELETE = "DELETE FROM Task WHERE id=@id";
 
         public TaskRepository(Database database)
@@ -58,6 +59,21 @@ namespace Todo.App_Code.Data
             return ret;
         }
 
+        public IList<Task> GetByTaskList(int taskListId)
+        {
+            db.Connect();
+            SqlCommand command = db.CreateCommand(SQL_SELECT_TASKLIST_ID);
+
+            command.Parameters.Add(new SqlParameter("@tasklist_id", SqlDbType.Int));
+            command.Parameters["@tasklist_id"].Value = taskListId;
+
+            SqlDataReader reader = db.Select(command);
+            IList<Task> tasks = Read(reader);
+            reader.Close();
+            db.Close();
+            return tasks;
+        }
+
         public Task Get(int id)
         {
             db.Connect();
@@ -78,6 +94,8 @@ namespace Todo.App_Code.Data
             db.Close();
             return ret;
         }
+
+        
 
         public static Task Get2(int id)
         {
