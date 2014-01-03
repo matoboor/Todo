@@ -22,6 +22,7 @@ namespace Todo.App_Code.Model
         public int TaskListId { get; set; }
 
         public User Owner { get; set; }
+        public TaskList Project { get; set; }
 
         public Task()
         {

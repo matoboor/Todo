@@ -40,7 +40,6 @@ namespace Todo.App_Code.Data
                 user.Name = reader.GetString(1);
                 user.Username = reader.GetString(2);
                 user.Password = reader.GetString(3);
-
                 users.Add(user);
             }
             return users;

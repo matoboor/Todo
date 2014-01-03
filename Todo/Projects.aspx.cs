@@ -16,11 +16,13 @@ namespace Todo
         {
             if (Request.QueryString["Id"] != null)
             {
+                DeleteButton.Visible = true;
                 GridView1.Visible = true;
                 projectHeader.Text = projectsDb.Get(Convert.ToInt32(Request.QueryString["Id"])).Title;
             }
             else
             {
+                DeleteButton.Visible = false;
                 GridView1.Visible = false;
                 projectHeader.Text = "<< Select project";
             }
@@ -83,6 +85,17 @@ namespace Todo
             GridView1.SelectedIndex = -1;
             GridView1.SelectRow(-1);
             DetailsView1.ChangeMode(DetailsViewMode.Insert);
+        }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+            TaskList projectToDelete = projectsDb.Get(Int32.Parse(Request["id"]));
+            if (projectToDelete != null)
+            {
+                projectsDb.Delete(projectToDelete);
+                ProjectsMenuRepeater.DataBind();
+                Response.Redirect("Projects.aspx");
+            }
         }
 
 
