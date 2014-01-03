@@ -39,6 +39,52 @@ namespace Todo
             }            
         }
 
+        protected void DetailsView1_ItemDeleted(object sender, DetailsViewDeletedEventArgs e)
+        {
+            GridView1.DataBind();
+            DetailsView1.Visible = false;
+        }
+
+        protected void DetailsView1_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+        {
+            GridView1.DataBind();
+        }
+
+        protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
+
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DetailsView1.Visible = true;
+        }
+
+        protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+        {
+            GridView1.DataBind();
+        }
+
+        protected void DetailsView1_ItemInserting(object sender, DetailsViewInsertEventArgs e)
+        {
+            e.Values["TaskListId"] = Request["id"];
+        }
+
+        protected void AddTask_Click(object sender, EventArgs e)
+        {
+            GridView1.SelectedIndex = -1;
+            GridView1.SelectRow(-1);
+            DetailsView1.ChangeMode(DetailsViewMode.Insert);
+           
+        }
+
+        protected void FirstTaskButton_Click(object sender, EventArgs e)
+        {
+            GridView1.SelectedIndex = -1;
+            GridView1.SelectRow(-1);
+            DetailsView1.ChangeMode(DetailsViewMode.Insert);
+        }
+
 
     }
 }

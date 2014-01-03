@@ -8,6 +8,13 @@ namespace Todo.App_Code.Model
     public class Task
     {
         public int Id { get; set; }
+        public string Title
+        {
+            get
+            {
+                return Text.Substring(0, Math.Min(Text.Length, 10))+"...";
+            }
+        }
         public string Text { get; set; }
         public DateTime Created { get; set; }
         public bool Done { get; set; }

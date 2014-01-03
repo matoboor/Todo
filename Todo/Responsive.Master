@@ -40,7 +40,7 @@
                 <nav>
                     <ul>
                         <li><a href="Projects.aspx">Projects</a></li>
-                        <li><a href="#">Tasks</a></li>
+                        <li><a href="Tasks.aspx">Tasks</a></li>
                         <li><a href="#">Team</a></li>
                     </ul>
                 </nav>
