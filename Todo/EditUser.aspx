@@ -69,6 +69,7 @@
         </asp:Table>                            
     </p>
     <asp:Button ID="Save" runat="server" Text="Save" OnClick="Save_Click" TabIndex="4" ValidationGroup="0" />
+    <asp:Button ID="Delete" runat="server" Text="Delete" OnClick="Delete_Click" />
     <asp:Label ID="errorLabel" runat="server"></asp:Label>
 </asp:Content>
 

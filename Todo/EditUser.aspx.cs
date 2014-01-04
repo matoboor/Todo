@@ -12,12 +12,16 @@ namespace Todo
     public partial class EditUser : System.Web.UI.Page
     {
         private UserRepository userDb = new UserRepository();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Request["id"]!=null)
             {
                 if (!Page.IsPostBack)
                 {
+                    Delete.ForeColor = System.Drawing.Color.White;
+                    Delete.BackColor = System.Drawing.Color.Red;
+
                     User user = userDb.Get(Int32.Parse(Request["id"]));
                     if (user != null)
                     {
@@ -63,6 +67,22 @@ namespace Todo
             }
             userDb.Update(user);
             Response.Redirect("Team.aspx?err=Updated user ID: "+user.Id);
+        }
+
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            if (Delete.BackColor == System.Drawing.Color.Red)
+            {
+                Delete.BackColor = System.Drawing.Color.ForestGreen;
+                Delete.ForeColor = System.Drawing.Color.Black;
+                Delete.Text = "Realy?";
+            }
+            else
+            {
+                User user = userDb.Get(Int32.Parse(Request["id"]));
+                userDb.Delete(user);
+                Response.Redirect("Team.aspx");
+            }
         }
     }
 }
