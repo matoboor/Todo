@@ -31,6 +31,24 @@ namespace Todo {
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
         
         /// <summary>
+        /// TaskDetailView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView TaskDetailView;
+        
+        /// <summary>
+        /// TaskDetailDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource TaskDetailDataSource;
+        
+        /// <summary>
         /// DropDownList1 control.
         /// </summary>
         /// <remarks>

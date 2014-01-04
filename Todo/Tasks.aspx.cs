@@ -37,5 +37,10 @@ namespace Todo
         {
             GridView1.DataBind();
         }
+
+        protected void TaskDetailView_ItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+        {
+            GridView1.DataBind();
+        }
     }
 }

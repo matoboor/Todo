@@ -48,11 +48,11 @@
                     <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                     <asp:TemplateField HeaderText="Text" SortExpression="Text">
                         <EditItemTemplate>
-                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Text") %>'></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Text") %>' Height="125px" Rows="3" TextMode="MultiLine" Width="400px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox1" ErrorMessage="Required Field"></asp:RequiredFieldValidator>
                         </EditItemTemplate>
                         <InsertItemTemplate>
-                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Text") %>'></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Text") %>' Height="125px" TextMode="MultiLine" Width="400px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox1" ErrorMessage="Required Field"></asp:RequiredFieldValidator>
                         </InsertItemTemplate>
                         <ItemTemplate>
