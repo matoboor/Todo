@@ -6,7 +6,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="main">
-    
+    <h2>Team</h2>
     <asp:GridView ID="UsersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="UsersDataSource" CellPadding="5" CellSpacing="10" ForeColor="White">
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />

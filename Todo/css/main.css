@@ -187,11 +187,23 @@ input[type=submit] {
     .minimenu li a{
         color: white;
     }
+#QuickNav img {
+    width: 150px;
+    height: 150px;
+    z-index:-1;
+    border: 5px solid #e44d26;
+}
 
 h2 {
     color: #e44d26;
 }
-
+.fete{
+    width: 163px;
+    display:table-cell;
+    text-align:center;
+    font-size:30px;
+    color:#e44d26;
+}
 .white {
     color: white;
 }

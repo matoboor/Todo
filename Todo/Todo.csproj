@@ -64,7 +64,10 @@
     <Content Include="Default.aspx" />
     <Content Include="EditUser.aspx" />
     <Content Include="img\Add.png" />
+    <Content Include="img\ProjectIcon.png" />
     <Content Include="img\Projects.png" />
+    <Content Include="img\TaskIcon.png" />
+    <Content Include="img\TeamIcon.png" />
     <Content Include="js\main.js" />
     <Content Include="js\vendor\jquery-1.10.1.min.js" />
     <Content Include="js\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
