@@ -80,8 +80,14 @@ body {
 .footer-container,
 .main aside {
     border-top: 20px solid #e44d26;
-}
 
+}
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    z-index:-1;
+}
 .header-container,
 .footer-container,
 .main aside {
@@ -142,7 +148,7 @@ nav a:hover {
 
 .footer-container footer {
     color: white;
-    padding: 20px 0;
+    
 }
 
 /* ===============

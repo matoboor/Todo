@@ -49,6 +49,24 @@ namespace Todo {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder aside;
         
         /// <summary>
+        /// UsernameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UsernameLabel;
+        
+        /// <summary>
+        /// LogOfButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LogOfButton;
+        
+        /// <summary>
         /// main control.
         /// </summary>
         /// <remarks>

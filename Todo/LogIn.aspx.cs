@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Todo.App_Code.Data;
@@ -42,7 +43,11 @@ namespace Todo
         {
             if(ValidateUser(UsernameTextBox.Text,PasswordTextBox.Text))
             {
-                ErrorLabel.Text="Validated";
+                User user = userDb.Get(UsernameTextBox.Text);
+                FormsAuthentication.SetAuthCookie(user.Username, RememberBox.Checked);
+                Session["Username"] = user.Username;
+                Session["Name"] = user.Name;
+                Response.Redirect("Default.aspx");
             }
             else
             {

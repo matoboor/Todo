@@ -18,6 +18,7 @@ namespace Todo
             if (!Page.IsPostBack)
             {
                 DropDownList1.DataBind();
+                DropDownList1.Items.FindByText(Session["Name"] as string).Selected = true;
                 IList<Task> tasks = TaskDb.GetByUser(Int32.Parse(DropDownList1.SelectedValue));
                 uncompleted.Text = tasks.Where(t => t.Done == false).Count().ToString();
                 comlpeted.Text = tasks.Where(t => t.Done == true).Count().ToString();

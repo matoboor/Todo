@@ -22,7 +22,8 @@
                 <section>
                     Username: <asp:TextBox ID="UsernameTextBox" runat="server" Width="200px"></asp:TextBox><br />
                     <br />
-                    Password: <asp:TextBox ID="PasswordTextBox" runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                    Password: <asp:TextBox ID="PasswordTextBox" runat="server" Width="200px" TextMode="Password"></asp:TextBox> <br />
+                    <div id="left">Remeber?: <asp:CheckBox ID="RememberBox" runat="server" /></div>
                 </section>   
                 <section>
                     <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
