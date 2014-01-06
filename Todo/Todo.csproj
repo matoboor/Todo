@@ -77,7 +77,6 @@
     <Content Include="RegisterUser.aspx" />
     <Content Include="Tasks.aspx" />
     <Content Include="Team.aspx" />
-    <Content Include="test.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -167,13 +166,6 @@
     </Compile>
     <Compile Include="Team.aspx.designer.cs">
       <DependentUpon>Team.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
