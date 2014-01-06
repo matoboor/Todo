@@ -75,7 +75,7 @@ namespace Todo
             {
                 Delete.BackColor = System.Drawing.Color.ForestGreen;
                 Delete.ForeColor = System.Drawing.Color.Black;
-                Delete.Text = "Realy?";
+                Delete.Text = GetLocalResourceObject("ReallyButton").ToString();
             }
             else
             {

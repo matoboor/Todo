@@ -13,6 +13,15 @@ namespace Todo {
     public partial class Tasks {
         
         /// <summary>
+        /// Localize1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Localize Localize1;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,24 @@ namespace Todo {
         protected global::System.Web.UI.WebControls.ObjectDataSource UserDropDownDataSource;
         
         /// <summary>
+        /// Localize2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Localize Localize2;
+        
+        /// <summary>
+        /// Localize3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Localize Localize3;
+        
+        /// <summary>
         /// uncompleted control.
         /// </summary>
         /// <remarks>
@@ -76,6 +103,15 @@ namespace Todo {
         protected global::System.Web.UI.WebControls.Label uncompleted;
         
         /// <summary>
+        /// Localize4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Localize Localize4;
+        
+        /// <summary>
         /// comlpeted control.
         /// </summary>
         /// <remarks>
@@ -83,6 +119,15 @@ namespace Todo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label comlpeted;
+        
+        /// <summary>
+        /// Localize5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Localize Localize5;
         
         /// <summary>
         /// total control.

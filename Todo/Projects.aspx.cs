@@ -24,7 +24,7 @@ namespace Todo
             {
                 DeleteButton.Visible = false;
                 GridView1.Visible = false;
-                projectHeader.Text = "<< Select project";
+                projectHeader.Text = "<< "+GetLocalResourceObject("SelectProject").ToString();
             }
         }
 

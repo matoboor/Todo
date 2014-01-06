@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
     
         <div id="header">
-            TaskeR test
+            TaskeR
         </div>
 
         <div id="main">
@@ -35,9 +35,6 @@
                        
         </div>
 
-        <div id="footer">
-            <p>Martin Boor</p>
-        </div>
     </form>
 </body>
 </html>
