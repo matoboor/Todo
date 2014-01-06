@@ -65,6 +65,7 @@
     <Content Include="EditUser.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="img\Add.png" />
+    <Content Include="img\Error.jpg" />
     <Content Include="img\ProjectIcon.png" />
     <Content Include="img\Projects.png" />
     <Content Include="img\TaskIcon.png" />

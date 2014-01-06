@@ -1,16 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="Todo.Error" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Responsive.Master" CodeBehind="Error.aspx.cs" Inherits="Todo.Error" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="title">
+    <strong>TaskeR</strong> |Error
+</asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="main">
+    <img src="img/Error.jpg" height="300px" width="300px" title="Error" />
+    <br />
+    <br />
+    <div class="Error">Ooops!!! Error occured...</div>
+</asp:Content>
+    
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    Oooops!!! Error occured
-    </div>
-    </form>
-</body>
-</html>

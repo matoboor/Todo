@@ -163,6 +163,11 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.Error {
+    font-size: 45px;
+    color: #e44d26;
+}
+
 table {
     /*#f16529*/
     border: 0px solid #f16529;
