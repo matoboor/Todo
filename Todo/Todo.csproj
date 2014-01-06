@@ -63,6 +63,7 @@
     <Content Include="css\normalize.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="EditUser.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="img\Add.png" />
     <Content Include="img\ProjectIcon.png" />
     <Content Include="img\Projects.png" />
@@ -113,6 +114,13 @@
     </Compile>
     <Compile Include="EditUser.aspx.designer.cs">
       <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="GlobalizedPage.cs">
       <SubType>ASPXCodeBehind</SubType>
