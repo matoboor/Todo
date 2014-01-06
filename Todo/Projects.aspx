@@ -7,7 +7,7 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="main">
     <h2><img src="/img/Projects.png" />&nbsp<asp:Label runat="server" ID="projectHeader"></asp:Label></h2>
-    <asp:Button ID="DeleteButton" runat="server" OnClick="DeleteButton_Click" Text="<%$ Resources: DeleteButton %>" />
+    <asp:Button ID="DeleteButton" runat="server" BackColor="Red" OnClick="DeleteButton_Click" Text="<%$ Resources: DeleteButton %>" />
     <p> 
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="TasksDataSource" CellPadding="5" CellSpacing="10" DataKeyNames="Id" ForeColor="White" ShowFooter="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <AlternatingRowStyle ForeColor="White" />

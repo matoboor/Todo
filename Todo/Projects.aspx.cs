@@ -89,12 +89,20 @@ namespace Todo
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
-            TaskList projectToDelete = projectsDb.Get(Int32.Parse(Request["id"]));
-            if (projectToDelete != null)
+            if (DeleteButton.BackColor == System.Drawing.Color.Green)
             {
-                projectsDb.Delete(projectToDelete);
-                ProjectsMenuRepeater.DataBind();
-                Response.Redirect("Projects.aspx");
+                TaskList projectToDelete = projectsDb.Get(Int32.Parse(Request["id"]));
+                if (projectToDelete != null)
+                {
+                    projectsDb.Delete(projectToDelete);
+                    ProjectsMenuRepeater.DataBind();
+                    Response.Redirect("Projects.aspx");
+                }
+            }
+            else
+            {
+                DeleteButton.BackColor = System.Drawing.Color.Green;
+                DeleteButton.Text = GetLocalResourceObject("ReallyButton").ToString();
             }
         }
 

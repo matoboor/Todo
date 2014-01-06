@@ -135,6 +135,9 @@
   <data name="NewButton" xml:space="preserve">
     <value>New</value>
   </data>
+  <data name="ReallyButton" xml:space="preserve">
+    <value>Really?</value>
+  </data>
   <data name="SelectProject" xml:space="preserve">
     <value>Select project</value>
   </data>
