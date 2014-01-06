@@ -9,7 +9,7 @@ using Todo.App_Code.Model;
 
 namespace Todo
 {
-    public partial class Projects : System.Web.UI.Page
+    public partial class Projects : GlobalizedPage
     {
         TaskListRepository projectsDb = new TaskListRepository();
         protected void Page_Load(object sender, EventArgs e)

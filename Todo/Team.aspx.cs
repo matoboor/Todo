@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Todo
 {
-    public partial class Team : System.Web.UI.Page
+    public partial class Team : GlobalizedPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

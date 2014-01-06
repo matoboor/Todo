@@ -11,7 +11,7 @@
 <head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>TaskeR</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -40,9 +40,9 @@
                 
                 <nav>
                     <ul>
-                        <li><a href="Projects.aspx">Projects</a></li>
-                        <li><a href="Tasks.aspx">Tasks</a></li>
-                        <li><a href="Team.aspx">Team</a></li>
+                        <li><a href="Projects.aspx"><asp:Localize runat="server" Text="<%$ Resources: MasterPage, MenuItemProjects %>"></asp:Localize></a></li>
+                        <li><a href="Tasks.aspx"><asp:Localize ID="Localize1" runat="server" Text="<%$ Resources: MasterPage, MenuItemTasks %>"></asp:Localize></a></li>
+                        <li><a href="Team.aspx"><asp:Localize ID="Localize2" runat="server" Text="<%$ Resources: MasterPage, MenuItemTeam %>"></asp:Localize></a></li>
                     </ul>
                 </nav>
                 
@@ -75,13 +75,23 @@
                     <asp:ContentPlaceHolder ID="aside" runat="server">
         
                     </asp:ContentPlaceHolder>
+                    <hr class="DarkOrange" />
                     <section>
-                     Logged in as:<br /> 
-                     <asp:Label ID="UsernameLabel" runat="server"></asp:Label> <br />
-                     <asp:Button ID="LogOfButton" runat="server" Text="LogOut" OnClick="LogOfButton_Click" BackColor="Red"/>
+                        <asp:Localize ID="Localize4" runat="server" Text="<%$ Resources: MasterPage, LanguageLabel %>"></asp:Localize><br />
+                        <asp:DropDownList ID="LanguageDropDownList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ChangeLanguage">
+                            <asp:ListItem Text="English" Value="en-GB"></asp:ListItem>
+                            <asp:ListItem Text="Slovak" Value="sk-SK"></asp:ListItem>
+                        </asp:DropDownList>
                     </section>
+                    
+                    <section>
+                        <asp:Localize ID="Localize3" runat="server" Text="<%$ Resources: MasterPage, LoginLabel %>"></asp:Localize><br /> 
+                        <asp:Label ID="UsernameLabel" runat="server"></asp:Label> <br />
+                        <asp:Button ID="LogOfButton" runat="server" Text="<%$ Resources: MasterPage, LogOutButton %>" OnClick="LogOfButton_Click" BackColor="Red"/>
+                    </section>
+                    
                 </aside>
-
+                    
                 <article>
                 <asp:ContentPlaceHolder ID="main" runat="server">
         

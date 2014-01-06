@@ -9,11 +9,10 @@ using System.Web.UI.WebControls;
 
 namespace Todo
 {
-    public partial class Default : GlobalizedPage
+    public partial class test : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -9,7 +9,7 @@ using Todo.App_Code.Model;
 
 namespace Todo
 {
-    public partial class EditUser : System.Web.UI.Page
+    public partial class EditUser : GlobalizedPage
     {
         private UserRepository userDb = new UserRepository();
 

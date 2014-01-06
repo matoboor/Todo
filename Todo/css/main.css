@@ -207,6 +207,19 @@ h2 {
 .white {
     color: white;
 }
+hr{
+    height: 1px;
+    color: #ed1d61;
+    background: #e44d26;
+    font-size: 5px;
+    border: 0;
+    margin-bottom:10px;
+}
+select {
+    background-color: #e44d26;
+    color: white;
+    border: 0px;
+}
 
 
 
