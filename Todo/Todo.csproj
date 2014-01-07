@@ -69,6 +69,7 @@
     <Content Include="Error.aspx" />
     <Content Include="img\Add.png" />
     <Content Include="img\Error.png" />
+    <Content Include="img\NewsIcon.png" />
     <Content Include="img\ProjectIcon.png" />
     <Content Include="img\Projects.png" />
     <Content Include="img\TaskIcon.png" />
@@ -201,7 +202,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_LocalResources\News.aspx.resx" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\MasterPage.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
@@ -249,6 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\Projects.aspx.sk.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\News.aspx.sk.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

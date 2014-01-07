@@ -12,11 +12,14 @@
         <a href="Tasks.aspx" title="Tasks"><img src="img/TaskIcon.png" /></a>
         <a href="Projects.aspx" title="Projects"><img src="img/ProjectIcon.png" /></a>
         <a href="Team.aspx" title="Users"><img src="img/TeamIcon.png" /></a>
+        <a href="News.aspx" title="News"><img src="img/NewsIcon.png" /></a>
     </div>
     <br />
     <div class="fete"><asp:Localize ID="Localize2" runat="server" Text="<%$ Resources: Tasks %>"></asp:Localize></div>
     <div class="fete"><asp:Localize ID="Localize3" runat="server" Text="<%$ Resources: Projects %>"></asp:Localize></div>
     <div class="fete"><asp:Localize ID="Localize4" runat="server" Text="<%$ Resources: Team %>"></asp:Localize></div>
+    <div class="fete"><asp:Localize ID="Localize5" runat="server" Text="<%$ Resources: News %>"></asp:Localize></div>
+
 </asp:Content>
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="aside">

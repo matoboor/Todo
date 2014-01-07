@@ -9,7 +9,7 @@ using Todo.App_Code.Model;
 
 namespace Todo
 {
-    public partial class News : System.Web.UI.Page
+    public partial class News : GlobalizedPage
     {
         NewsRepositoryXML NewsDB = new NewsRepositoryXML();
 
@@ -25,7 +25,7 @@ namespace Todo
                     DeleteButton.Visible = true;
                     TitleTextBox.Text = notice.Title;
                     TextBox.Text = notice.Text;
-                    AddButton.Text = "Edit";
+                    AddButton.Text = GetLocalResourceObject("EditButton").ToString();
                     Session["tempId"] = notice.Id;
                 }
             }
@@ -39,7 +39,7 @@ namespace Todo
         {
             if ((!string.IsNullOrEmpty(TitleTextBox.Text)) && (!string.IsNullOrEmpty(TextBox.Text)))
             {
-                if (AddButton.Text.Equals("Add"))
+                if (AddButton.Text.Equals(GetLocalResourceObject("AddButton").ToString()))
                 {
                     Notice notice = new Notice();
                     notice.Title = TitleTextBox.Text;
@@ -58,7 +58,7 @@ namespace Todo
                     NewsDB.Update(notice);
                     TitleTextBox.Text = null;
                     TextBox.Text = null;
-                    AddButton.Text = "Add";
+                    AddButton.Text = GetLocalResourceObject("AddButton").ToString();
                     XmlDataSource1.DataBind();
                     NewsRepeater.DataBind();
                 }
@@ -73,7 +73,7 @@ namespace Todo
                 notice.Id = Int32.Parse(Session["tempId"].ToString());
                 NewsDB.Delete(notice);
                 DeleteButton.BackColor = System.Drawing.Color.Red;
-                DeleteButton.Text = "Delete";
+                DeleteButton.Text = GetLocalResourceObject("DeleteButton").ToString();
                 DeleteButton.Visible = false;
                 TitleTextBox.Text = null;
                 TextBox.Text = null;
@@ -82,7 +82,7 @@ namespace Todo
             }
             else
             {
-                DeleteButton.Text = "Really?";
+                DeleteButton.Text = GetLocalResourceObject("ReallyButton").ToString();
                 DeleteButton.BackColor = System.Drawing.Color.Green;
             }
         }
