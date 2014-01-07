@@ -4,10 +4,10 @@
     <strong>TaskeR</strong> |Error
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="main">
-    <img src="img/Error.jpg" height="300px" width="300px" title="Error" />
+    <img src="img/Error.png" height="50%" width="50%" title="Error" />
     <br />
     <br />
-    <div class="Error">Ooops!!! Error occured...</div>
+    <div class="Error">Ooops!!! Error has occured...</div>
 </asp:Content>
     
 

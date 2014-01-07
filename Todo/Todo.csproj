@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\News.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="css\login.css" />
     <Content Include="css\main.css" />
     <Content Include="css\normalize.css" />
@@ -65,7 +68,7 @@
     <Content Include="EditUser.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="img\Add.png" />
-    <Content Include="img\Error.jpg" />
+    <Content Include="img\Error.png" />
     <Content Include="img\ProjectIcon.png" />
     <Content Include="img\Projects.png" />
     <Content Include="img\TaskIcon.png" />
@@ -84,9 +87,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Data\NewsRepositoryXML.cs" />
     <Compile Include="App_Code\Data\TaskRepository.cs" />
     <Compile Include="App_Code\Data\UnitOfWork.cs" />
     <Compile Include="App_Code\Data\UserRepository.cs" />
+    <Compile Include="App_Code\Data\XmlHelper.cs" />
+    <Compile Include="App_Code\Model\Notice.cs" />
     <Compile Include="App_Code\Model\User.cs" />
     <Compile Include="App_Code\Model\TaskList.cs" />
     <Compile Include="App_Code\Model\Task.cs" />
@@ -187,9 +193,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_GlobalResources\MasterPage.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
