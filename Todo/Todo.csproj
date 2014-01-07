@@ -78,6 +78,7 @@
     <Content Include="js\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
     <Content Include="css\master.css" />
     <Content Include="LogIn.aspx" />
+    <Content Include="News.aspx" />
     <Content Include="Projects.aspx" />
     <Content Include="RegisterUser.aspx" />
     <Content Include="Tasks.aspx" />
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Projects.aspx.cs">
       <DependentUpon>Projects.aspx</DependentUpon>

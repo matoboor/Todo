@@ -88,6 +88,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to News.
+        /// </summary>
+        internal static string MenuItemNews {
+            get {
+                return ResourceManager.GetString("MenuItemNews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Projects.
         /// </summary>
         internal static string MenuItemProjects {

@@ -1,3 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <News>
+  <Notice>
+    <Id>1</Id>
+    <Title>Firemna Party</Title>
+    <Text>bla bla bla bla</Text>
+    <Date>07. 01. 2014 10:27:52</Date>
+  </Notice>
+  <Notice>
+    <Id>2</Id>
+    <Title>Hail Hitler</Title>
+    <Text>Hitler party</Text>
+    <Date>07. 01. 2014 10:28:34</Date>
+  </Notice>
+  <Notice>
+    <Id>3</Id>
+    <Title>Jano</Title>
+    <Text>kokot</Text>
+    <Date>07. 01. 2014 10:30:53</Date>
+  </Notice>
+  <Notice>
+    <Id>5</Id>
+    <Title>zttrz</Title>
+    <Text>zzzzz</Text>
+    <Date>07. 01. 2014 10:32:09</Date>
+  </Notice>
+  <Notice>
+    <Id>6</Id>
+    <Title>tre</Title>
+    <Text>zmrd</Text>
+    <Date>07. 01. 2014 10:39:57</Date>
+  </Notice>
 </News>

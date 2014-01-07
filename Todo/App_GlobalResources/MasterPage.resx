@@ -138,4 +138,7 @@
   <data name="ReallyButton" xml:space="preserve">
     <value>Really?</value>
   </data>
+  <data name="MenuItemNews" xml:space="preserve">
+    <value>News</value>
+  </data>
 </root>

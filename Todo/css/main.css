@@ -226,9 +226,27 @@ select {
     border: 0px;
 }
 
+.NewsTitle {
+    color: #e44d26;
+    font-size: 20px;
+}
 
+.NewsDate {
+    color: #f16529;
+    font-size:12px;
+}
 
+.NewsText {
+    font-size: 17px;
+}
 
+.NewsEditButton {
+    float: right;
+}
+.NewsEditButton a{
+    float: right;
+    color:#e44d26;
+}
 
 
 
@@ -301,7 +319,13 @@ select {
 
     nav {
         float: left;
-        width: 38%;
+        width: 70%;
+    }
+
+    nav ul li a {
+        width:15%;
+        margin-left:5px;
+        margin-right:5px;
     }
 
 /* ============

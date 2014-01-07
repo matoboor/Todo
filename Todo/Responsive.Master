@@ -40,9 +40,12 @@
                 
                 <nav>
                     <ul>
+                         
                         <li><a href="Projects.aspx"><asp:Localize runat="server" Text="<%$ Resources: MasterPage, MenuItemProjects %>"></asp:Localize></a></li>
                         <li><a href="Tasks.aspx"><asp:Localize ID="Localize1" runat="server" Text="<%$ Resources: MasterPage, MenuItemTasks %>"></asp:Localize></a></li>
                         <li><a href="Team.aspx"><asp:Localize ID="Localize2" runat="server" Text="<%$ Resources: MasterPage, MenuItemTeam %>"></asp:Localize></a></li>
+                        <li><a href="News.aspx"><asp:Localize ID="Localize5" runat="server" Text="<%$ Resources: MasterPage, MenuItemNews %>"></asp:Localize></a></li>
+                       
                     </ul>
                 </nav>
                 
