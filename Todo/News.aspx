@@ -22,7 +22,7 @@
             
         </FooterTemplate>
     </asp:Repeater>
-    <asp:XmlDataSource ID="XmlDataSource1" runat="server" EnableCaching="false" DataFile="~/App_Data/News.xml" XPath="News/Notice"></asp:XmlDataSource>
+    <asp:XmlDataSource ID="XmlDataSource1" runat="server"  DataFile="~/App_Data/News.xml" XPath="News/Notice"></asp:XmlDataSource>
 </asp:Content>
     
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="aside">

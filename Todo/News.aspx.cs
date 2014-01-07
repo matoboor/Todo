@@ -45,6 +45,7 @@ namespace Todo
                     notice.Title = TitleTextBox.Text;
                     notice.Text = TextBox.Text;
                     NewsDB.Insert(notice);
+                    NewsDB.SortByDate();
                     TitleTextBox.Text = null;
                     TextBox.Text = null;
                     XmlDataSource1.DataBind();

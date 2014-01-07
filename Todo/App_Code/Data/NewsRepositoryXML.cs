@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Xml;
+using System.Xml.Linq;
 using Todo.App_Code.Model;
 
 namespace Todo.App_Code.Data
@@ -23,6 +24,18 @@ namespace Todo.App_Code.Data
                 textWritter.WriteEndElement();
                 textWritter.Close();
             }
+        }
+
+        public void SortByDate()
+        {
+            XElement root = XElement.Load(FileName);
+            var orderedtabs = root.Elements("Notice")
+                      .OrderByDescending(xtab => (DateTime)xtab.Element("Date"))
+                      .ToArray();
+            root.RemoveAll();
+            foreach (XElement tab in orderedtabs)
+                root.Add(tab);
+            root.Save(FileName);
         }
 
         public void Insert(Notice notice)

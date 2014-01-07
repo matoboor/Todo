@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <News>
   <Notice>
-    <Id>1</Id>
-    <Title>Firemna Party</Title>
-    <Text>bla bla bla bla</Text>
-    <Date>07. 01. 2014 10:27:52</Date>
+    <Id>5</Id>
+    <Title>ježko</Title>
+    <Text>pichlavy</Text>
+    <Date>08. 01. 2014 12:39:01</Date>
   </Notice>
   <Notice>
-    <Id>2</Id>
-    <Title>Hail Hitler</Title>
-    <Text>Hitler party</Text>
-    <Date>07. 01. 2014 10:28:34</Date>
+    <Id>4</Id>
+    <Title>Ožieračka</Title>
+    <Text>na odhankach v sobotu</Text>
+    <Date>08. 01. 2014 12:10:52</Date>
   </Notice>
   <Notice>
     <Id>3</Id>
@@ -19,9 +19,9 @@
     <Date>07. 01. 2014 10:30:53</Date>
   </Notice>
   <Notice>
-    <Id>4</Id>
-    <Title>Ožieračka</Title>
-    <Text>na odhankach v sobotu</Text>
-    <Date>08. 01. 2014 12:10:52</Date>
+    <Id>1</Id>
+    <Title>Firemna Party</Title>
+    <Text>bla bla bla bla</Text>
+    <Date>07. 01. 2014 10:27:52</Date>
   </Notice>
 </News>
