@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="main">
     <h2><asp:Localize ID="Localize1" runat="server" Text="<%$ Resources: Title %>"></asp:Localize></h2>
-    <asp:Repeater ID="NewsRepeater" runat="server" DataSourceID="XmlDataSource1">
+    <asp:Repeater ID="NewsRepeater" runat="server" EnableViewState="false" DataSourceID="XmlDataSource1">
         <HeaderTemplate>
             <ul>
         </HeaderTemplate>
@@ -22,7 +22,7 @@
             
         </FooterTemplate>
     </asp:Repeater>
-    <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/News.xml" XPath="News/Notice"></asp:XmlDataSource>
+    <asp:XmlDataSource ID="XmlDataSource1" runat="server" EnableCaching="false" DataFile="~/App_Data/News.xml" XPath="News/Notice"></asp:XmlDataSource>
 </asp:Content>
     
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="aside">

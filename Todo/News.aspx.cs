@@ -49,6 +49,7 @@ namespace Todo
                     TextBox.Text = null;
                     XmlDataSource1.DataBind();
                     NewsRepeater.DataBind();
+                    Response.Redirect("News.aspx");
                 }
                 else
                 {
@@ -61,6 +62,7 @@ namespace Todo
                     AddButton.Text = GetLocalResourceObject("AddButton").ToString();
                     XmlDataSource1.DataBind();
                     NewsRepeater.DataBind();
+                    Response.Redirect("News.aspx");
                 }
             }
         }
@@ -74,11 +76,13 @@ namespace Todo
                 NewsDB.Delete(notice);
                 DeleteButton.BackColor = System.Drawing.Color.Red;
                 DeleteButton.Text = GetLocalResourceObject("DeleteButton").ToString();
+                AddButton.Text = GetLocalResourceObject("AddButton").ToString();
                 DeleteButton.Visible = false;
                 TitleTextBox.Text = null;
                 TextBox.Text = null;
                 XmlDataSource1.DataBind();
                 NewsRepeater.DataBind();
+                Response.Redirect("News.aspx");
             }
             else
             {
