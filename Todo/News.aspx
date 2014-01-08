@@ -5,7 +5,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="main">
-    <h2><asp:Localize ID="Localize1" runat="server" Text="<%$ Resources: Title %>"></asp:Localize></h2>
+    <h2><asp:Localize ID="Localize1" runat="server" Text="<%$ Resources: Title %>"></asp:Localize><a href="GetPdf.ashx" title="Export to PDF"><img width="40px" height="40px" id="ExportToPdf" src="img/ExportPdfIcon.jpg" /></a></h2>
+    
     <asp:Repeater ID="NewsRepeater" runat="server" EnableViewState="false" DataSourceID="XmlDataSource1">
         <HeaderTemplate>
             <ul>

@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,7 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,6 +75,7 @@
     <Content Include="Error.aspx" />
     <Content Include="img\Add.png" />
     <Content Include="img\Error.png" />
+    <Content Include="img\ExportPdfIcon.jpg" />
     <Content Include="img\NewsIcon.png" />
     <Content Include="img\ProjectIcon.png" />
     <Content Include="img\Projects.png" />
@@ -130,6 +137,9 @@
     </Compile>
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPdf.ashx.cs">
+      <DependentUpon>GetPdf.ashx</DependentUpon>
     </Compile>
     <Compile Include="GlobalizedPage.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +205,7 @@
   <ItemGroup>
     <Content Include="Site.Master" />
     <Content Include="Responsive.Master" />
+    <Content Include="GetPdf.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

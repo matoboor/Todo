@@ -162,6 +162,9 @@ nav a:hover {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#ExportToPdf {
+    float:right;
+}
 
 .Error {
     font-size: 35px;
@@ -185,6 +188,22 @@ section {
 }
 
 input[type=submit] {
+    background-color: #e44d26;
+    color: white;
+    border: 0px;
+}
+input[type=text] {
+    background-color: #e44d26;
+    color: white;
+    border: 0px;
+}
+
+input[type=password] {
+    background-color: #e44d26;
+    color: white;
+    border: 0px;
+}
+textarea {
     background-color: #e44d26;
     color: white;
     border: 0px;

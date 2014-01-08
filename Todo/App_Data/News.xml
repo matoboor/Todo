@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <News>
   <Notice>
-    <Id>5</Id>
-    <Title>ježko</Title>
-    <Text>pichlavy</Text>
-    <Date>08. 01. 2014 12:39:01</Date>
+    <Id>6</Id>
+    <Title>Hladame .NET programátora</Title>
+    <Text>prihlas sa</Text>
+    <Date>08. 01. 2014 12:43:06</Date>
   </Notice>
   <Notice>
     <Id>4</Id>
     <Title>Ožieračka</Title>
-    <Text>na odhankach v sobotu</Text>
+    <Text>na odhankach v sobotu o druhej</Text>
     <Date>08. 01. 2014 12:10:52</Date>
   </Notice>
   <Notice>
@@ -17,11 +17,5 @@
     <Title>Jano</Title>
     <Text>oslava narodenin</Text>
     <Date>07. 01. 2014 10:30:53</Date>
-  </Notice>
-  <Notice>
-    <Id>1</Id>
-    <Title>Firemna Party</Title>
-    <Text>bla bla bla bla</Text>
-    <Date>07. 01. 2014 10:27:52</Date>
   </Notice>
 </News>
