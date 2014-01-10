@@ -60,6 +60,7 @@ namespace Todo.App_Code.Data
             }
             catch (Exception e)
             {
+                HttpContext.Current.Session["Error"] = e; 
                 throw e;
             }
             finally

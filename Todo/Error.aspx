@@ -1,13 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Responsive.Master" CodeBehind="Error.aspx.cs" Inherits="Todo.Error" %>
-
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="title">
-    <strong>TaskeR</strong> |Error
-</asp:Content>
-<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="main">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="Todo.Error" %>
+<%@ Register Assembly="ErrorDetails" Namespace="ErrorDetails" TagPrefix="CC" %>
     <img src="img/Error.png" height="150px" width="150px" title="Error" />
     <br />
     <br />
-    <div class="Error">Ooops!!! Error has occured...</div>
-</asp:Content>
+    <CC:ErrorDetail ID="ErrorDetailControll" runat="server" ErrorMessage="Ooops error has occured..." ShowDetailsMessage="false"  ></CC:ErrorDetail>
+
     
 

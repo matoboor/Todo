@@ -65,6 +65,7 @@ namespace Todo.App_Code.Data
             }
             catch (Exception ex)
             {
+                HttpContext.Current.Session["Error"] = ex; 
                 throw ex;
             }
         }
@@ -88,6 +89,7 @@ namespace Todo.App_Code.Data
             }
             catch (Exception ex)
             {
+                HttpContext.Current.Session["Error"] = ex; 
                 throw ex;
             }
 
@@ -110,6 +112,7 @@ namespace Todo.App_Code.Data
             }
             catch (Exception ex)
             {
+                HttpContext.Current.Session["Error"] = ex; 
                 throw ex;
             }
         }
@@ -135,6 +138,7 @@ namespace Todo.App_Code.Data
             }
             catch (Exception ex)
             {
+                HttpContext.Current.Session["Error"] = ex; 
                 throw ex;
             }
 
@@ -162,6 +166,7 @@ namespace Todo.App_Code.Data
             }
             catch(Exception ex)
             {
+                HttpContext.Current.Session["Error"] = ex; 
                 throw ex;
             }
         }

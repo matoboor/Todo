@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ErrorDetails, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\ErrorDetails.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.4.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Libraries\itextsharp.dll</HintPath>
@@ -86,6 +90,7 @@
     <Content Include="js\vendor\jquery-1.10.1.min.js" />
     <Content Include="js\vendor\modernizr-2.6.2-respond-1.1.0.min.js" />
     <Content Include="css\master.css" />
+    <Content Include="Libraries\ErrorDetails.dll" />
     <Content Include="Libraries\itextsharp.dll" />
     <Content Include="Libraries\iTextSharp.xml" />
     <Content Include="LogIn.aspx" />
@@ -103,7 +108,7 @@
     <Compile Include="App_Code\Data\TaskRepository.cs" />
     <Compile Include="App_Code\Data\UnitOfWork.cs" />
     <Compile Include="App_Code\Data\UserRepository.cs" />
-    <Compile Include="App_Code\Data\XmlHelper.cs" />
+    <Compile Include="App_Code\Model\XmlHelper.cs" />
     <Compile Include="App_Code\Model\Notice.cs" />
     <Compile Include="App_Code\Model\User.cs" />
     <Compile Include="App_Code\Model\TaskList.cs" />
