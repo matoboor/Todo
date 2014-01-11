@@ -13,5 +13,10 @@ namespace Todo
         protected void Page_Load(object sender, EventArgs e)
         {
         }
+
+        protected void ErrorDetailControll_ErrorOccured(object sender, Exception ex)
+        {
+
+        }
     }
 }

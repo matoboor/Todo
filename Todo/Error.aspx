@@ -3,7 +3,7 @@
     <img src="img/Error.png" height="150px" width="150px" title="Error" />
     <br />
     <br />
-    <CC:ErrorDetail ID="ErrorDetailControll" runat="server" ErrorMessage="Ooops error has occured..." ShowDetailsMessage="false"  ></CC:ErrorDetail>
+    <CC:ErrorDetail ID="ErrorDetailControll" runat="server"  ErrorMessage="Ooops error has occured..." ShowDetailsMessage="false" OnErrorOccured="ErrorDetailControll_ErrorOccured"  ></CC:ErrorDetail>
 
     
 
