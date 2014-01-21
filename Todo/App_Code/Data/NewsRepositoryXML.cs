@@ -30,7 +30,7 @@ namespace Todo.App_Code.Data
         {
             XElement root = XElement.Load(FileName);
             var orderedtabs = root.Elements("Notice")
-                      .OrderByDescending(xtab => (DateTime)xtab.Element("Date"))
+                      .OrderByDescending(xtab => DateTime.Parse(xtab.Element("Date").Value))
                       .ToArray();
             root.RemoveAll();
             foreach (XElement tab in orderedtabs)
